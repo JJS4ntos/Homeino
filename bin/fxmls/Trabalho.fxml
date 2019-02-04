@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="root" stylesheets="@softstyle.css" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.telaprincipal_controller">
+   <children>
+      <BorderPane fx:id="bordermain" blendMode="SRC_ATOP" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1280.0">
+         <top>
+            <VBox>
+               <children>
+                  <MenuBar>
+                    <menus>
+                      <Menu fx:id="menu_main" mnemonicParsing="false" text="Principal">
+                        <items>
+                          <MenuItem fx:id="item_newroom" mnemonicParsing="false" text="Novo cômodo">
+                                 <accelerator>
+                                    <KeyCodeCombination alt="DOWN" code="F1" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                                 </accelerator></MenuItem>
+                              <MenuItem fx:id="project_save" mnemonicParsing="false" text="Salvar projeto...">
+                                 <accelerator>
+                                    <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                 </accelerator></MenuItem>
+                              <MenuItem fx:id="load_project" mnemonicParsing="false" text="Carregar projeto...">
+                                 <accelerator>
+                                    <KeyCodeCombination alt="UP" code="L" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                 </accelerator></MenuItem>
+                              <MenuItem fx:id="item_close" mnemonicParsing="false" text="Fechar">
+                                 <accelerator>
+                                    <KeyCodeCombination alt="DOWN" code="F4" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                                 </accelerator></MenuItem>
+                        </items>
+                      </Menu>
+                      <Menu fx:id="menu_home" mnemonicParsing="false" text="Casa">
+                        <items>
+                          <MenuItem fx:id="item_changeimg" mnemonicParsing="false" text="Alterar imagem de fundo de um cômodo">
+                                 <accelerator>
+                                    <KeyCodeCombination alt="UP" code="I" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                 </accelerator></MenuItem>
+                              <MenuItem fx:id="item_showcode" mnemonicParsing="false" text="Exibir código gerado">
+                                 <accelerator>
+                                    <KeyCodeCombination alt="UP" code="F2" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                 </accelerator></MenuItem>
+                              <MenuItem fx:id="menu_create_item" mnemonicParsing="false" text="Criar um novo sensor/atuador">
+                                 <accelerator>
+                                    <KeyCodeCombination alt="UP" code="N" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                 </accelerator></MenuItem>
+                              <MenuItem fx:id="menu_itemuser" mnemonicParsing="false" text="Itens criados pelo usuário">
+                                 <accelerator>
+                                    <KeyCodeCombination alt="UP" code="U" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                 </accelerator></MenuItem>
+                        </items>
+                      </Menu>
+                      <Menu fx:id="menu_configuration" mnemonicParsing="false" text="Configurações">
+                        <items>
+                              <Menu fx:id="menu_languages" mnemonicParsing="false" text="Linguagens">
+                                 <items>
+                                    <RadioMenuItem id="0" mnemonicParsing="false" text="Alemão">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="languages" />
+                                       </toggleGroup>
+                                       <accelerator>
+                                          <KeyCodeCombination alt="DOWN" code="NUMPAD0" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                       </accelerator>
+                                    </RadioMenuItem>
+                                    <RadioMenuItem id="1" mnemonicParsing="false" text="Espanhol" toggleGroup="$languages">
+                                       <accelerator>
+                                          <KeyCodeCombination alt="DOWN" code="NUMPAD1" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                       </accelerator></RadioMenuItem>
+                                    <RadioMenuItem id="2" mnemonicParsing="false" text="Francês" toggleGroup="$languages">
+                                       <accelerator>
+                                          <KeyCodeCombination alt="DOWN" code="NUMPAD2" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                       </accelerator></RadioMenuItem>
+                                    <RadioMenuItem id="3" mnemonicParsing="false" text="Inglês" toggleGroup="$languages">
+                                       <accelerator>
+                                          <KeyCodeCombination alt="DOWN" code="NUMPAD3" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                       </accelerator></RadioMenuItem>
+                                    <RadioMenuItem id="4" mnemonicParsing="false" text="Italiano" toggleGroup="$languages">
+                                       <accelerator>
+                                          <KeyCodeCombination alt="DOWN" code="NUMPAD4" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                       </accelerator></RadioMenuItem>
+                                    <RadioMenuItem id="5" mnemonicParsing="false" text="Português" toggleGroup="$languages">
+                                       <accelerator>
+                                          <KeyCodeCombination alt="DOWN" code="NUMPAD5" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                       </accelerator></RadioMenuItem>
+                                 </items>
+                              </Menu>
+                              <MenuItem fx:id="item_account" mnemonicParsing="false" text="Alterar minha conta">
+                                 <accelerator>
+                                    <KeyCodeCombination alt="UP" code="F6" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                 </accelerator></MenuItem>
+                        </items>
+                      </Menu>
+                        <Menu fx:id="menu_help" mnemonicParsing="false" text="Ajuda">
+                           <items>
+                              <MenuItem fx:id="item_about" mnemonicParsing="false" text="About">
+                                 <accelerator>
+                                    <KeyCodeCombination alt="UP" code="F8" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                 </accelerator></MenuItem>
+                           </items>
+                        </Menu>
+                    </menus>
+                  </MenuBar>
+                  <HBox alignment="TOP_CENTER" maxHeight="40.0" prefHeight="40.0" prefWidth="1280.0" spacing="3.0" styleClass="H-Box">
+                     <children>
+                        <Circle fx:id="color_status" fill="RED" radius="10.0" stroke="WHITE" strokeLineCap="BUTT" strokeType="INSIDE" strokeWidth="3.0">
+                           <effect>
+                              <Reflection />
+                           </effect>
+                        </Circle>
+                        <ComboBox fx:id="cb_portas" prefHeight="27.0" prefWidth="150.0" promptText="Porta">
+                           <effect>
+                              <Reflection />
+                           </effect>
+                        </ComboBox>
+                        <ComboBox fx:id="cb_baunds" prefHeight="27.0" prefWidth="150.0" promptText="Bauds">
+                           <effect>
+                              <Reflection />
+                           </effect>
+                        </ComboBox>
+                        <Hyperlink fx:id="h_conectar" prefHeight="27.0" prefWidth="109.0" styleClass="item-title" text="Iniciar conexão">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                           <effect>
+                              <Reflection />
+                           </effect>
+                        </Hyperlink>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="37.0" prefWidth="1280.0" spacing="5.0" styleClass="H-Box">
+                     <children>
+                        <Button mnemonicParsing="false" styleClass="freetotest" text=" Gratuito para testar" visible="false">
+                           <graphic>
+                              <Label fx:id="lbl_count" styleClass="freetotest" text="0" />
+                           </graphic>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </top>
+         <center>
+            <StackPane>
+               <children>
+                  <TabPane prefHeight="416.0" prefWidth="1180.0">
+                     <tabs>
+                        <Tab fx:id="tab_myhouse" closable="false" text="Sua casa">
+                           <content>
+                              <TabPane fx:id="tab_root" style="-fx-background-image: url(&quot;../images/bgtabroot.png&quot;);" />
+                           </content>
+                        </Tab>
+                        <Tab fx:id="tab_mycode" closable="false" text="Código gerado">
+                           <content>
+                              <VBox>
+                                 <children>
+                                    <ListView fx:id="listOfCode" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS" />
+                                    <ToolBar prefHeight="40.0" prefWidth="200.0">
+                                      <items>
+                                        <Button fx:id="copyButton" mnemonicParsing="false" text="Copiar código" />
+                                      </items>
+                                    </ToolBar>
+                                 </children>
+                              </VBox>
+                           </content>
+                        </Tab>
+                     </tabs>
+                  </TabPane>
+                  <HBox fx:id="load_room_layer" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: black; -fx-opacity: 0.5;" visible="false" StackPane.alignment="CENTER">
+                     <children>
+                        <VBox alignment="CENTER" blendMode="SRC_ATOP" fillWidth="false" maxHeight="100.0" maxWidth="100.0" minHeight="100.0" minWidth="100.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: black; -fx-background-radius: 50;">
+                           <children>
+                              <ProgressIndicator />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </StackPane>
+         </center>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <bottom>
+            <TabPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="141.0" prefWidth="1280.0" style="-fx-font-size: 13px;" styleClass="H-Box" BorderPane.alignment="CENTER">
+               <tabs>
+                  <Tab fx:id="tab_comand" closable="false" text="Linha de comando">
+                     <content>
+                        <VBox prefHeight="107.0" prefWidth="1282.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <TextArea fx:id="txt_comand" editable="false" prefHeight="97.0" prefWidth="1280.0" promptText="Nenhum comando digitado até o momento.">
+                                 <font>
+                                    <Font name="Consolas" size="12.0" />
+                                 </font>
+                              </TextArea>
+                              <TextField fx:id="send_comand" maxHeight="13.0" maxWidth="20.0" minHeight="1.0" minWidth="1.0" prefHeight="13.0" prefWidth="20.0" promptText="Digite o comando a ser executado e aperte a tecla ENTER" visible="false" />
+                           </children>
+                           <BorderPane.margin>
+                              <Insets top="5.0" />
+                           </BorderPane.margin>
+                        </VBox>
+                     </content>
+                     <graphic>
+                        <ImageView fitHeight="26.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/linecomand.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Tab>
+                  <Tab fx:id="tab_bytes" closable="false" text="Bytes de resposta">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/loopsection.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <content>
+                        <ListView fx:id="list_logs" prefHeight="200.0" prefWidth="200.0" />
+                     </content>
+                  </Tab>
+                  <Tab fx:id="tab_reg" closable="false" text="Relatórios">
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/logs.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <content>
+                        <ListView fx:id="list_reg" focusTraversable="false" prefHeight="200.0" prefWidth="200.0" />
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </bottom>
+         <right>
+            <ScrollPane fitToWidth="true" prefHeight="457.0" prefViewportHeight="457.0" prefViewportWidth="100.0" prefWidth="126.0">
+               <content>
+                  <FlowPane fx:id="flow_items" alignment="TOP_CENTER" hgap="5.0" minWidth="100.0" prefHeight="457.0" prefWidth="100.0" styleClass="itempane" vgap="5.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <ToggleButton id="btn_ldr" fx:id="btn_ldr" maxHeight="40.0" maxWidth="40.0" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="button-item">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="group_items" />
+                           </toggleGroup>
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/LDR_icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </ToggleButton>
+                        <ToggleButton id="btn_buzzer" fx:id="btn_buzzer" maxHeight="40.0" maxWidth="40.0" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="button-item" toggleGroup="$group_items">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/BUZZER_icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </ToggleButton>
+                        <ToggleButton id="btn_ntc_temp" fx:id="btn_ntc_temp" maxHeight="40.0" maxWidth="40.0" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="button-item" toggleGroup="$group_items">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/NTC_TEMP_icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </ToggleButton>
+                        <ToggleButton id="btn_lm35" fx:id="btn_lm35" mnemonicParsing="false" styleClass="button-item" toggleGroup="$group_items">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/LM35_ICON.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </ToggleButton>
+                        <ToggleButton id="btn_IR" fx:id="btn_IR" mnemonicParsing="false" styleClass="button-item" toggleGroup="$group_items">
+                           <graphic>
+                              <ImageView fitHeight="150.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/IR.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </ToggleButton>
+                        <ToggleButton id="btn_PIR" fx:id="btn_PIR" mnemonicParsing="false" styleClass="button-item" toggleGroup="$group_items">
+                           <graphic>
+                              <ImageView fitHeight="150.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/PIR_icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </ToggleButton>
+                        <ToggleButton id="btn_DS1302" fx:id="btn_DS1302" mnemonicParsing="false" styleClass="button-item" toggleGroup="$group_items">
+                           <graphic>
+                              <ImageView fitHeight="150.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/DS1302_ICON.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </ToggleButton>
+                        <ToggleButton id="btn_snivel" fx:id="btn_snivel" mnemonicParsing="false" styleClass="button-item" toggleGroup="$group_items">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/SensorNivel_icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </ToggleButton>
+                        <ToggleButton id="btn_ultrasonic" fx:id="btn_ultrasonic" mnemonicParsing="false" styleClass="button-item" toggleGroup="$group_items">
+                           <graphic>
+                              <ImageView fitHeight="150.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/ULTRA_SONIC.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </ToggleButton>
+                        <ToggleButton id="btn_LCD" fx:id="btn_LCD" mnemonicParsing="false" styleClass="button-item" toggleGroup="$group_items">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/LCD_icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </ToggleButton>
+                        <ToggleButton id="btn_light" fx:id="btn_light" contentDisplay="CENTER" maxHeight="40.0" maxWidth="40.0" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="button-item" toggleGroup="$group_items">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/light_icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </ToggleButton>
+                        <ToggleButton id="btn_servo" fx:id="btn_servo" maxHeight="40.0" maxWidth="40.0" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="button-item" toggleGroup="$group_items">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" smooth="false">
+                                 <image>
+                                    <Image url="@../images/SERVO_icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></ToggleButton>
+                     </children>
+                  </FlowPane>
+               </content>
+            </ScrollPane>
+         </right>
+      </BorderPane>
+      <BorderPane fx:id="borderlogin" prefHeight="200.0" prefWidth="200.0" visible="false">
+         <center>
+            <TitledPane animated="false" collapsible="false" maxHeight="232.0" maxWidth="621.0" prefHeight="232.0" prefWidth="621.0" style="-fx-font-size: 12px;" text="Acessar sistema de controle" BorderPane.alignment="CENTER">
+              <content>
+                  <TabPane>
+                     <tabs>
+                        <Tab closable="false" text="Entrar na sua conta local">
+                           <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="H-Box">
+                                 <children>
+                                    <TextField fx:id="tf_login" layoutX="28.0" layoutY="46.0" maxHeight="23.0" maxWidth="242.0" prefHeight="23.0" prefWidth="242.0" promptText="Insira o seu login" style="-fx-font-size: 12px;" />
+                                    <PasswordField fx:id="tf_password" layoutX="28.0" layoutY="95.0" maxHeight="23.0" maxWidth="242.0" prefHeight="23.0" prefWidth="242.0" promptText="Insira a sua senha" style="-fx-font-size: 12px;" />
+                                    <HBox alignment="CENTER_LEFT" layoutX="27.0" layoutY="118.0" prefHeight="55.0" prefWidth="515.0" spacing="5.0">
+                                       <children>
+                                          <Button fx:id="btn_signin" defaultButton="true" layoutX="10.0" layoutY="23.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" style="-fx-font-size: 12px;" text="Entrar" />
+                                          <Button fx:id="btn_signup" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" style="-fx-font-size: 12px;" text="Criar usuário" />
+                                          <Pane prefHeight="55.0" prefWidth="77.0" HBox.hgrow="ALWAYS" />
+                                          <Button fx:id="btn_exit" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" style="-fx-font-size: 12px;" text="Sair" />
+                                       </children>
+                                    </HBox>
+                                    <Label layoutX="28.0" layoutY="31.0" style="-fx-font-size: 12px;" text="Login:" />
+                                    <Label layoutX="28.0" layoutY="81.0" style="-fx-font-size: 12px;" text="Senha:" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab closable="false" text="Ativar assinatura">
+                           <content>
+                              <VBox prefHeight="200.0" prefWidth="100.0" styleClass="H-Box">
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="30.0" prefWidth="619.0" spacing="5.0">
+                                       <children>
+                                          <TextField fx:id="tf_codet" alignment="CENTER" prefHeight="29.0" prefWidth="380.0" promptText="Código de transação" style="-fx-font-size: 12px;" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="619.0" spacing="5.0">
+                                       <children>
+                                          <TextField fx:id="tf_name" promptText="Nome" />
+                                          <TextField fx:id="tf_email" layoutX="250.0" layoutY="20.0" prefWidth="200.0" promptText="E-mail" />
+                                          <TextField fx:id="tf_country" layoutX="292.0" layoutY="14.0" maxWidth="140.0" prefWidth="200.0" promptText="Sobrenome" text="País" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="40.0" prefWidth="619.0" spacing="5.0">
+                                       <children>
+                                          <TextField fx:id="tf_state" promptText="Estado" />
+                                          <TextField fx:id="tf_city" layoutX="250.0" layoutY="18.0" promptText="Cidade" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="59.0" prefHeight="30.0" prefWidth="619.0" spacing="10.0">
+                                       <children>
+                                          <RadioButton id="pagseguro" mnemonicParsing="false" style="-fx-text-fill: white; -fx-font-weight: bold;" text="PagSeguro">
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="payment" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <RadioButton id="paypal" layoutX="277.0" layoutY="27.0" mnemonicParsing="false" style="-fx-text-fill: white; -fx-font-weight: bold;" text="Paypal" toggleGroup="$payment" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="35.0" prefWidth="619.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" prefHeight="23.0" prefWidth="143.0" text="Ativar Homeino" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </content>
+                        </Tab>
+                     </tabs>
+                  </TabPane>
+              </content>
+            </TitledPane>
+         </center>
+      </BorderPane>
+      <AnchorPane fx:id="splashscreen" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <VBox alignment="CENTER" layoutX="520.0" layoutY="203.0" prefHeight="240.0" prefWidth="240.0" style="-fx-background-color: LightSeaGreen; -fx-background-radius: 200;">
+               <children>
+                  <ImageView fitHeight="174.0" fitWidth="154.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                     <image>
+                        <Image url="@../images/logoino.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <VBox fx:id="item_user_screen" visible="false">
+         <children>
+            <ToolBar prefHeight="40.0" prefWidth="200.0">
+              <items>
+                <Button fx:id="btn_itemuserview_exit" mnemonicParsing="false" text="Voltar" />
+              </items>
+            </ToolBar>
+            <ListView fx:id="list_itemuser" VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
+      <VBox fx:id="expired_screen" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: black; -fx-opacity: 0.8;" visible="false">
+         <children>
+            <Label fx:id="lbl_expired_title" style="-fx-font-size: 50px;" text="Licença expirada" />
+            <Label fx:id="lbl_expired_subtitle" text="Para saber mais informações de como comprar uma licença acesse o nosso site: www.homeino.blogspot.com.br" />
+         </children>
+      </VBox>
+   </children>
+</StackPane>

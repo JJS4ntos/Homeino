@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Serial"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/SerialArdu"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/SQLite"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/FXControls"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/ControlsFx"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Sqlite"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/ProjetoLibrary"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

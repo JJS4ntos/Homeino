@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane blendMode="SRC_ATOP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="663.0" prefWidth="1280.0" style="-fx-background-color: gray;" styleClass="background" stylesheets="@theme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <VBox alignment="TOP_CENTER">
+         <children>
+            <Label styleClass="label-header" text="Sistema de monitoramento da casa" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Separator prefWidth="200.0" />
+            <ProgressBar fx:id="bar_anim" prefHeight="22.0" prefWidth="1270.0" progress="0.01" styleClass="item-title" />
+         </children>
+      </VBox>
+   </top>
+   <left>
+      <VBox alignment="TOP_CENTER" prefHeight="610.0" prefWidth="173.0" BorderPane.alignment="CENTER" />
+   </left>
+   <bottom>
+      <HBox alignment="TOP_RIGHT" spacing="5.0">
+         <children>
+            <ComboBox prefWidth="150.0" />
+            <Hyperlink style="-fx-background-color: white;" text="Visualizar relatórios gerados" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Hyperlink>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+   </bottom>
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

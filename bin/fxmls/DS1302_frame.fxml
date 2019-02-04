@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="364.0" prefWidth="442.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="215.0" minWidth="10.0" prefWidth="99.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="343.0" minWidth="10.0" prefWidth="343.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="lbl_name" style="-fx-font-size: 13px;" text="Nome" />
+            <Label fx:id="lbl_pin" style="-fx-font-size: 13px;" text="Pinos" GridPane.rowIndex="1" />
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="3.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <ComboBox fx:id="cb_pin1" prefHeight="23.0" prefWidth="63.0" />
+                  <ComboBox fx:id="cb_pin2" layoutX="150.0" layoutY="31.0" prefHeight="23.0" prefWidth="63.0" />
+                  <ComboBox fx:id="cb_pin3" layoutX="182.0" layoutY="31.0" prefHeight="23.0" prefWidth="63.0" />
+               </children>
+            </HBox>
+            <TextField fx:id="tf_name" maxWidth="300.0" promptText="Digite o nome do item" GridPane.columnIndex="1" />
+            <Label fx:id="lbl_active" style="-fx-font-size: 13px;" text="Acionar" GridPane.rowIndex="2" />
+            <ComboBox fx:id="cb_item" prefHeight="23.0" prefWidth="207.0" promptText="Item que será acionado" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label fx:id="lbl_time" style="-fx-font-size: 12px;" text="Horário de acionamento" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="3" />
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="3.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <children>
+                  <ComboBox fx:id="cb_hour" prefHeight="23.0" prefWidth="64.0" promptText="H" />
+                  <ComboBox fx:id="cb_minute" layoutX="150.0" layoutY="20.0" prefHeight="23.0" prefWidth="64.0" promptText="M" />
+                  <ComboBox fx:id="cb_second" layoutX="182.0" layoutY="20.0" prefHeight="23.0" prefWidth="64.0" promptText="S" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="6">
+               <children>
+                  <RadioButton id="time" fx:id="radio_time" mnemonicParsing="false" text="HORA">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="options" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton id="date" fx:id="radio_date" mnemonicParsing="false" text="DATA" toggleGroup="$options" />
+                  <RadioButton id="date_time" fx:id="radio_datetime" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="HORA/DATA" toggleGroup="$options" />
+                  <RadioButton id="read" fx:id="radio_read" layoutX="90.0" layoutY="10.0" mnemonicParsing="false" text="LEITURA" toggleGroup="$options" />
+               </children>
+            </HBox>
+            <Label fx:id="lbl_date" style="-fx-font-size: 13px;" text="Data de acionamento" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="4" />
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="3.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <children>
+                  <ComboBox fx:id="cb_day" prefHeight="23.0" prefWidth="63.0" promptText="D" />
+                  <ComboBox fx:id="cb_month" layoutX="10.0" layoutY="10.0" prefHeight="23.0" prefWidth="63.0" promptText="M" />
+                  <ComboBox fx:id="cb_year" layoutX="73.0" layoutY="10.0" prefHeight="23.0" prefWidth="63.0" promptText="Y" />
+               </children>
+            </HBox>
+            <Label fx:id="lbl_condition" text="Condição de acionamento" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="5" />
+            <ComboBox fx:id="cb_condition" prefWidth="150.0" promptText="?" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+         </children>
+      </GridPane>
+   </center>
+   <top>
+      <VBox alignment="CENTER" prefHeight="107.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="63.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/DS1302_ICON.png" />
+               </image>
+            </ImageView>
+            <Label style="-fx-font-size: 14px;" text="- Adicionar DS1302 -" />
+            <Separator prefWidth="200.0" />
+         </children>
+      </VBox>
+   </top>
+</BorderPane>

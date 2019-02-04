@@ -1,0 +1,162 @@
+
+
+.button{
+	-fx-background-color: 
+        #c3c4c4,
+        linear-gradient(#d6d6d6 50%, white 100%),
+        radial-gradient(center 50% -40%, radius 200%, #e6e6e6 45%, rgba(230,230,230,0) 50%);
+    -fx-background-radius: 30;
+    -fx-background-insets: 0,1,1;
+    -fx-text-fill: black;
+    
+}
+
+.button:hover{
+	-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );
+}
+
+.button:pressed{
+	-fx-background-insets: 0,2,2;
+}
+
+.toggle-button{
+	-fx-background-color: Turquoise;
+	-fx-background-radius: 10;
+	-fx-text-fill: white;
+}
+
+.toggle-button:selected{
+	-fx-background-color: MediumTurquoise;
+}
+
+.toggle-button:hover{
+	-fx-background-color: DarkTurquoise;
+}
+
+.H-Box{
+	-fx-background-color: LightSeaGreen;
+}
+
+.tool-bar{
+	-fx-background-color: LightSeaGreen;
+}
+
+
+
+.hyperlink{
+	-fx-text-fill: white;
+	-fx-font-weight: bold;
+	-fx-font-family: Constantia;
+}
+
+
+
+.itempane{
+	-fx-background-color: linear-gradient(to bottom, LightSeaGreen 9%, MediumTurquoise 50%, LightSeaGreen 100%, MediumTurquoise 96%);
+	-fx-border-color: white;
+	-fx-border-radius: 2 2 0 0;
+	-fx-border-width: 3;
+}
+
+.tab:selected{
+	-fx-background-color:DarkCyan;
+}
+
+.tab:hover{
+	-fx-background-color: Turquoise;
+}
+
+.tab .tab-label{
+	-fx-text-fill: white;
+	-fx-font-weight: bold;
+}
+
+.tab{
+	-fx-background-color: LightSeaGreen;
+	-fx-background-insets: 1 1 1 1;
+	-fx-background-radius: 2 2 0 0;
+	-fx-focus-color: DarkCyan;
+	-fx-font-size: 12px;
+	-fx-font-weight: bold;
+	-fx-padding: 5 10 5 10;
+	-fx-font-family: 'Constantia';
+	
+}
+
+.tab-pane .tab-header-area .tab-header-background {
+  -fx-background-color: LightSeaGreen;
+}
+
+.text-field{
+	-fx-background-radius: 15;
+	-fx-background-color: LightSeaGreen;
+	-fx-border-color: white;
+	-fx-border-radius: 15;
+	-fx-border-width: 3;
+	-fx-text-inner-color: white;
+	-fx-prompt-text-fill: white;
+	-fx-font-size: 11px;
+}
+
+.combo-box{
+	-fx-background-color: LightSeaGreen;
+	-fx-border-width: 3;
+	-fx-border-color: white;
+	-fx-border-radius: 15;
+	-fx-background-radius: 15;
+}
+
+.combo-box .list-cell{
+	-fx-border-radius: 15;
+	-fx-text-fill: white;
+	-fx-font-weight: bold;
+	-fx-background-color: LightSeaGreen;
+	-fx-background-radius: 15;
+}
+
+.combo-box .arrow-button{
+	-fx-opacity: 0;
+}
+
+
+
+.button-item{
+  -fx-background-color: transparent;
+  -fx-border-width: 2;
+  -fx-border-radius: 10;
+  -fx-pref-width: 40;
+  -fx-min-width: 40;
+  -fx-min-height: 40;
+  -fx-pref-height: 40;
+  -fx-max-width: 40;
+  -fx-max-height: 40;
+  -fx-opacity: 0.6;
+}
+
+.button-item:hover{
+	-fx-opacity: 1;	
+}
+
+.button-item:selected{
+	-fx-opacity: 1;
+}
+
+.labelTitle{
+	-fx-text-fill: black;
+	-fx-font-size: 11px;
+}
+
+.freetotest{
+	-fx-background-color: 
+        linear-gradient(#ffd65b, #e68400),
+        linear-gradient(#ffef84, #f2ba44),
+        linear-gradient(#ffea6a, #efaa22),
+        linear-gradient(#ffe657 0%, #f8c202 50%, #eea10b 100%),
+        linear-gradient(from 0% 0% to 15% 50%, rgba(255,255,255,0.9), rgba(255,255,255,0));
+    -fx-background-radius: 40;
+    -fx-background-insets: 0,1,2,3,0;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 5 10 5 10;
+}

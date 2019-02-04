@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane blendMode="SRC_ATOP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="391.0" prefWidth="600.0" style="-fx-background-radius: 20;" styleClass="H-Box" stylesheets="@softstyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+  <columnConstraints>
+    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="431.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="100.0" minHeight="100.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="600.0" GridPane.columnSpan="2147483647">
+         <children>
+            <ToggleButton mnemonicParsing="false" prefHeight="68.0" prefWidth="70.0" style="-fx-background-color: Pink; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 40;" />
+            <Line endX="10.0" startX="-10.0" />
+            <ToggleButton layoutX="259.0" layoutY="24.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="70.0" style="-fx-background-color: MediumSpringGreen; -fx-background-radius: 40; -fx-text-fill: white; -fx-font-weight: bold;" />
+            <Line endX="10.0" layoutX="351.0" layoutY="36.0" startX="-10.0" />
+            <ToggleButton layoutX="310.0" layoutY="14.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="70.0" style="-fx-background-color: Teal; -fx-background-radius: 40; -fx-text-fill: white; -fx-font-weight: bold;" />
+         </children>
+      </HBox>
+      <Label alignment="TOP_CENTER" contentDisplay="RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-font-family: &quot;Consolas&quot;; -fx-font-size: 15px; -fx-background-color: lightgreen; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 20; -fx-border-radius: 20;" text="if(condition)//do" GridPane.columnSpan="2147483647" GridPane.rowIndex="5" GridPane.rowSpan="2">
+         <padding>
+            <Insets bottom="5.0" top="5.0" />
+         </padding>
+         <GridPane.margin>
+            <Insets bottom="3.0" left="5.0" right="5.0" />
+         </GridPane.margin>
+      </Label>
+      <ComboBox fx:id="cb_control_type" maxWidth="400.0" prefWidth="400.0" promptText="Qual o tipo desta estrutura de controle ?" GridPane.rowIndex="1" />
+      <ComboBox fx:id="cb_control_item" maxWidth="400.0" prefWidth="400.0" promptText="O que deverá ser acionado ?" GridPane.rowIndex="2" />
+      <ComboBox fx:id="cb_control_symbol" maxWidth="400.0" prefWidth="400.0" promptText="Sob qual condição ele deverá ser acionado/desacionado?" GridPane.rowIndex="3" />
+   </children>
+   <effect>
+      <DropShadow color="#00000072" />
+   </effect>
+</GridPane>

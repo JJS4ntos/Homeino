@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="312.0" prefWidth="385.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <VBox alignment="CENTER" prefHeight="108.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="66.0" fitWidth="168.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/ULTRA_SONIC.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lbl_title" style="-fx-font-size: 13px;" text="- Adicionar um novo sensor ultra sônico -" />
+            <Separator prefWidth="200.0" />
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="203.0" minWidth="10.0" prefWidth="150.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="320.0" minWidth="10.0" prefWidth="235.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label style="-fx-font-size: 13px;" text="Echo" GridPane.rowIndex="1" />
+            <Label style="-fx-font-size: 13px;" text="Trigger" GridPane.rowIndex="2" />
+            <Label fx:id="lbl_cm" alignment="CENTER" contentDisplay="TEXT_ONLY" text="Acionar com distância" textAlignment="CENTER" wrapText="true" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+            <Label fx:id="lbl_active" style="-fx-font-size: 12px;" text="Acionar" GridPane.rowIndex="4" />
+            <ComboBox fx:id="cb_echo" prefWidth="150.0" promptText="ECHO" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ComboBox fx:id="cb_trigger" prefWidth="150.0" promptText="TRIGGER" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ComboBox fx:id="cb_cm" prefWidth="150.0" promptText="CM" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <ComboBox fx:id="cb_item" prefWidth="150.0" promptText="ITEM" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label fx:id="lbl_name" style="-fx-font-size: 12px;" text="Nome" />
+            <TextField fx:id="tf_name" maxWidth="200.0" promptText="Nome sem caracteres especiais" GridPane.columnIndex="1" />
+            <Label fx:id="lbl_onoff" style="-fx-font-size: 12px;" text="Acionar quando" GridPane.rowIndex="5" />
+            <ComboBox fx:id="cb_onoff" prefWidth="150.0" promptText="&gt; OR &lt;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+         </children>
+      </GridPane>
+   </center>
+</BorderPane>
